@@ -1,0 +1,662 @@
+<html>
+        <head><title>Downloaded HTML</title></head>
+        <body>
+            <pre style="white-space: pre-wrap; word-wrap: break-word;"><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CPL | Chathamangalam Premier League</title>
+  <style>
+    :root {
+      --bg: #070b14;
+      --card: #101726;
+      --card-2: #182238;
+      --accent: #00e676;
+      --accent-gold: #fbbf24;
+      --accent-blue: #38bdf8;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: rgba(7, 11, 20, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .brand-logo {
+      background: linear-gradient(135deg, var(--accent), var(--accent-blue));
+      color: #04130a;
+      font-weight: 900;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .brand-text {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero Banner */
+    .hero {
+      max-width: 1180px;
+      margin: 24px auto;
+      padding: 0 20px;
+    }
+
+    .hero-box {
+      background:
+        radial-gradient(circle at top right, rgba(0, 230, 118, 0.16), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.14), transparent 50%),
+        var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 28px;
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(251, 191, 36, 0.14);
+      color: var(--accent-gold);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      padding: 5px 13px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.6px;
+      margin-bottom: 14px;
+    }
+
+    .hero-box h1 {
+      font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+      line-height: 1.15;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .hero-box h1 span {
+      color: var(--accent);
+    }
+
+    .hero-box p {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 22px;
+      max-width: 520px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #051b0e;
+      font-weight: 800;
+      padding: 11px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    .btn-secondary {
+      background: var(--card-2);
+      color: var(--text);
+      border: 1px solid var(--border);
+      font-weight: 700;
+      padding: 11px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+
+    /* Featured Match Center */
+    .match-card {
+      background: var(--card-2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .match-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .live-pill {
+      color: var(--accent);
+    }
+
+    .teams-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+    }
+
+    .team-box {
+      flex: 1;
+    }
+
+    .crest {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 8px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 0.95rem;
+      color: var(--accent-blue);
+    }
+
+    .team-name {
+      font-weight: 800;
+      font-size: 0.98rem;
+    }
+
+    .score-box {
+      background: var(--bg);
+      padding: 10px 16px;
+      border-radius: 12px;
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      letter-spacing: 1px;
+    }
+
+    .match-venue {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Sections */
+    section {
+      max-width: 1180px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .sec-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .sec-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sec-title::before {
+      content: "";
+      width: 5px;
+      height: 22px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    /* Teams Grid */
+    .teams-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .club-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .club-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(0, 230, 118, 0.4);
+    }
+
+    .club-badge {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 12px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--card-2), var(--bg));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--accent);
+    }
+
+    .club-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .club-card p {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    /* Points Table */
+    .table-wrap {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 600px;
+    }
+
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+
+    th {
+      background: var(--card-2);
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pos-top {
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .pts {
+      font-weight: 900;
+      color: var(--accent);
+      font-size: 1rem;
+    }
+
+    /* Fixtures & Scorers */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .fixture-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      gap: 10px;
+    }
+
+    .fixture-item:last-child {
+      border-bottom: none;
+    }
+
+    .fixture-teams {
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .fixture-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .fixture-badge {
+      background: var(--card-2);
+      border: 1px solid var(--border);
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--accent-blue);
+      white-space: nowrap;
+    }
+
+    .scorer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .scorer-row:last-child {
+      border-bottom: none;
+    }
+
+    .goals-pill {
+      background: rgba(0, 230, 118, 0.14);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.85rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 50px;
+      background: var(--card);
+    }
+
+    @media (max-width: 840px) {
+      .hero-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav">
+      <a href="#" class="brand">
+        <div class="brand-logo">CPL</div>
+        <div class="brand-text">
+          Chathamangalam Premier League
+          <span>Official Football Portal</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#teams">Clubs</a>
+        <a href="#standings">Points Table</a>
+        <a href="#fixtures">Fixtures</a>
+        <a href="#scorers">Golden Boot</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="hero-box">
+      <div>
+        <span class="badge">🏆 10 YEARS OF FOOTBALL LEGACY</span>
+        <h1>CHATHAMANGALAM <span>PREMIER LEAGUE</span></h1>
+        <p>The official digital home of CPL. Follow live standings, matchday fixtures, club profiles, and top goalscorers.</p>
+        <div class="hero-actions">
+          <a href="#standings" class="btn-primary">Points Table</a>
+          <a href="#fixtures" class="btn-secondary">Match Schedule</a>
+        </div>
+      </div>
+
+      <div class="match-card">
+        <div class="match-meta">
+          <span>FEATURED MATCH</span>
+          <span class="live-pill">● FULL TIME</span>
+        </div>
+        <div class="teams-row">
+          <div class="team-box">
+            <div class="crest">EFC</div>
+            <div class="team-name">Emirates FC</div>
+          </div>
+          <div class="score-box">2 - 1</div>
+          <div class="team-box">
+            <div class="crest">RDZ</div>
+            <div class="team-name">RDZ FC</div>
+          </div>
+        </div>
+        <div class="match-venue">📍 CPL Floodlight Arena • Chathamangalam</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="teams">
+    <div class="sec-header">
+      <h2 class="sec-title">CPL Participating Clubs</h2>
+    </div>
+    <div class="teams-grid" id="clubsGrid"></div>
+  </section>
+
+  <section id="standings">
+    <div class="sec-header">
+      <h2 class="sec-title">League Standings</h2>
+    </div>
+    <div class="table-wrap">
+      <table id="pointsTable">
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Club</th>
+            <th>P</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GD</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="fixtures">
+    <div class="grid-2">
+      <div class="card">
+        <div class="sec-header">
+          <h2 class="sec-title">Fixtures & Results</h2>
+        </div>
+        <div id="fixtureList"></div>
+      </div>
+
+      <div class="card" id="scorers">
+        <div class="sec-header">
+          <h2 class="sec-title">Golden Boot Leaderboard</h2>
+        </div>
+        <div id="scorerList"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <strong>CPL — Chathamangalam Premier League</strong><br />
+    © 2026 Official Tournament Portal • Built for Grassroots Football
+  </footer>
+
+  <script>
+    // 👇 ഇവിടെ CPL ടീമുകളുടെ യഥാർത്ഥ പേരുകളും വിവരങ്ങളും എഡിറ്റ് ചെയ്യാം
+    const clubs = [
+      { code: "EFC", name: "Emirates FC", manager: "Manager: Team EFC", p: 4, w: 3, d: 1, l: 0, gd: "+6", pts: 10 },
+      { code: "RDZ", name: "RDZ FC", manager: "Manager: Team RDZ", p: 4, w: 2, d: 1, l: 1, gd: "+2", pts: 7 },
+      { code: "CFC", name: "Chathamangalam United", manager: "Manager: Team CUFC", p: 4, w: 1, d: 1, l: 2, gd: "-2", pts: 4 },
+      { code: "SFC", name: "Strikers XI", manager: "Manager: Team SXI", p: 4, w: 0, d: 1, l: 3, gd: "-6", pts: 1 }
+    ];
+
+    const fixtures = [
+      { match: "Emirates FC vs RDZ FC", date: "Matchday 04", status: "FT: 2 - 1" },
+      { match: "Chathamangalam Utd vs Strikers XI", date: "Matchday 04", status: "FT: 1 - 1" },
+      { match: "RDZ FC vs Chathamangalam Utd", date: "Nov 25 • 07:30 PM", status: "UPCOMING" },
+      { match: "Strikers XI vs Emirates FC", date: "Nov 26 • 08:30 PM", status: "UPCOMING" }
+    ];
+
+    const scorers = [
+      { player: "Player 1", club: "Emirates FC", goals: 4 },
+      { player: "Player 2", club: "RDZ FC", goals: 3 },
+      { player: "Player 3", club: "Chathamangalam United", goals: 2 }
+    ];
+
+    // Render Clubs
+    const clubsGrid = document.getElementById("clubsGrid");
+    clubs.forEach(c => {
+      clubsGrid.innerHTML += `
+        <div class="club-card">
+          <div class="club-badge">${c.code}</div>
+          <h3>${c.name}</h3>
+          <p>${c.manager}</p>
+        </div>
+      `;
+    });
+
+    // Render Points Table
+    const tbody = document.querySelector("#pointsTable tbody");
+    [...clubs].sort((a, b) => b.pts - a.pts).forEach((t, i) => {
+      tbody.innerHTML += `
+        <tr>
+          <td class="${i < 2 ? 'pos-top' : ''}">${i + 1}</td>
+          <td><strong>${t.name}</strong></td>
+          <td>${t.p}</td>
+          <td>${t.w}</td>
+          <td>${t.d}</td>
+          <td>${t.l}</td>
+          <td>${t.gd}</td>
+          <td class="pts">${t.pts}</td>
+        </tr>
+      `;
+    });
+
+    // Render Fixtures
+    const fixtureList = document.getElementById("fixtureList");
+    fixtures.forEach(f => {
+      fixtureList.innerHTML += `
+        <div class="fixture-item">
+          <div>
+            <div class="fixture-teams">${f.match}</div>
+            <div class="fixture-sub">${f.date}</div>
+          </div>
+          <span class="fixture-badge">${f.status}</span>
+        </div>
+      `;
+    });
+
+    // Render Top Scorers
+    const scorerList = document.getElementById("scorerList");
+    scorers.forEach((s, idx) => {
+      scorerList.innerHTML += `
+        <div class="scorer-row">
+          <div>
+            <strong>${idx + 1}. ${s.player}</strong>
+            <div class="fixture-sub">${s.club}</div>
+          </div>
+          <span class="goals-pill">⚽ ${s.goals} Goals</span>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
+</pre>
+        </body>
+    </html>
